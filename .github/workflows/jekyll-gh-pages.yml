@@ -34,7 +34,7 @@ jobs:
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
-          destination: ./_site
+          destination: ./dist
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
@@ -42,7 +42,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || 'https://<USERNAME>.github.io/<REPO>/' }}
     runs-on: ubuntu-latest
     needs: build
     steps:
