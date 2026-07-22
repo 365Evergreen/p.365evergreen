@@ -1,0 +1,1 @@
+export { GetInTouch as default, GetInTouch } from './GetInTouch'

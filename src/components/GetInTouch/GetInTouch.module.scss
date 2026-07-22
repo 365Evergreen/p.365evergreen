@@ -1,0 +1,207 @@
+.section {
+  display: grid;
+  align-items: start;
+  padding: clamp(2rem, 6vw, 4rem);
+  background: var(--bg);
+  text-align: left;
+}
+
+.section[data-gap='sm'] {
+  gap: 10rem;
+}
+
+.section[data-gap='md'] {
+  gap: 2rem;
+}
+
+.section[data-gap='large'] {
+  gap: clamp(2rem, 6vw, 5rem);
+}
+
+.content {
+  display: grid;
+  gap: 1rem;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  line-height: 1.1;
+}
+
+.description {
+  max-width: 42rem;
+  color: var(--text);
+}
+
+.bullets {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--text-h);
+}
+
+.formColumn {
+  min-width: 0;
+}
+
+.formRoot {
+  display: grid;
+}
+
+.formRoot[data-gap='sm'] :global(.rjsf),
+.formRoot[data-gap='sm'] :global(.rjsf > form) {
+  gap: 0.75rem;
+}
+
+.formRoot[data-gap='md'] :global(.rjsf),
+.formRoot[data-gap='md'] :global(.rjsf > form) {
+  gap: 1rem;
+}
+
+.formRoot[data-gap='large'] :global(.rjsf),
+.formRoot[data-gap='large'] :global(.rjsf > form) {
+  gap: 1.5rem;
+}
+
+.formRoot :global(.rjsf),
+.formRoot :global(.rjsf > form),
+.formRoot :global(.rjsf fieldset),
+.formRoot :global(.rjsf .form-group) {
+  min-width: 0;
+}
+
+.formRoot :global(.rjsf),
+.formRoot :global(.rjsf > form),
+.formRoot :global(.rjsf fieldset) {
+  display: grid;
+  grid-template-columns: inherit;
+  gap: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.formRoot :global(.rjsf > .form-group) {
+  grid-column: 1 / -1;
+  grid-template-columns: inherit;
+}
+
+.formRoot :global(.rjsf > .form-group > fieldset) {
+  grid-template-columns: inherit;
+}
+
+.formRoot :global(.get-in-touch-field) {
+  min-width: 0;
+  margin: 0;
+}
+
+.formRoot :global(.get-in-touch-field--span-1) {
+  grid-column: span 1;
+}
+
+.formRoot :global(.get-in-touch-field--span-2) {
+  grid-column: span 2;
+}
+
+.formRoot :global(label) {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+.formRoot :global(input),
+.formRoot :global(textarea),
+.formRoot :global(select) {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 0.4rem;
+  background: var(--bg);
+  color: var(--text-h);
+  font: inherit;
+}
+
+.formRoot :global(textarea) {
+  resize: vertical;
+}
+
+.formRoot :global(.error-detail) {
+  margin: 0.35rem 0 0;
+  padding-left: 1.25rem;
+  color: #b33030;
+  font-size: 0.9rem;
+}
+
+.status,
+.error,
+.success {
+  margin: 0;
+  padding: 0.85rem 1rem;
+  border-radius: 0.4rem;
+}
+
+.status {
+  color: var(--text);
+}
+
+.error {
+  border: 1px solid #e7a6a6;
+  background: #fff1f1;
+  color: #8f2020;
+}
+
+.success {
+  border: 1px solid #91c9a3;
+  background: #effaf2;
+  color: #176b32;
+}
+
+.submitButton {
+  grid-column: 1 / -1;
+  width: 100%;
+  min-height: 2.75rem;
+  border: 0;
+  border-radius: 0.4rem;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+@media (max-width: 768px) {
+  .section {
+    grid-template-columns: 1fr !important;
+    padding-inline: 1rem;
+  }
+
+  .formRoot,
+  .formRoot :global(.rjsf > form),
+  .formRoot :global(.rjsf fieldset) {
+    grid-template-columns: 1fr !important;
+  }
+
+  .formRoot :global(.get-in-touch-field) {
+    grid-column: 1 !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .error {
+    background: #351d1d;
+    color: #ffb4b4;
+  }
+
+  .success {
+    background: #173522;
+    color: #a8e6ba;
+  }
+}

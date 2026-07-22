@@ -1,0 +1,124 @@
+.page {
+  padding: var(--space-16) var(--space-6);
+}
+
+.inner {
+  max-width: var(--max-width-prose);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  min-width: 0;
+}
+
+.back {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  align-self: flex-start;
+}
+
+.back:hover {
+  color: var(--color-text-primary);
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.date {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.tags {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.tag {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  background-color: var(--color-surface-muted);
+  color: var(--color-text-secondary);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-full);
+}
+
+.heading {
+  margin: 0;
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-tight);
+}
+
+.featuredImage {
+  width: 100%;
+  max-width: 100%;
+  border-radius: var(--radius-lg);
+  height: auto;
+  object-fit: cover;
+}
+
+.body {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.updated {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.body :global(*) {
+  max-width: 100%;
+}
+
+.body :global(img),
+.body :global(video),
+.body :global(iframe),
+.body :global(embed),
+.body :global(object) {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.body :global(pre),
+.body :global(code),
+.body :global(blockquote),
+.body :global(table) {
+  max-width: 100%;
+}
+
+.body :global(pre) {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.body :global(table) {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+.notFound {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+}
+
+.backLink {
+  color: var(--color-brand-primary);
+}

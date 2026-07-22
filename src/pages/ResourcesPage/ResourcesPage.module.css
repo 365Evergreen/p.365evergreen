@@ -1,0 +1,16 @@
+.page {
+  padding: 2rem 1rem;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.content {
+  display: grid;
+  gap: 2rem;
+}
+
+.status {
+  padding: 4rem 1rem;
+  text-align: center;
+  color: var(--color-text-muted);
+}
