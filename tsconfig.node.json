@@ -3,8 +3,8 @@
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "target": "es2015",
-    "lib": ["ES2015"],
+    "target": "es2016",
+    "lib": ["ES2016"],
     "types": ["node"],
     "skipLibCheck": true,
 

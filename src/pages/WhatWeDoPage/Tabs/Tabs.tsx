@@ -1,9 +1,9 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
+import styles from './tabs.module.css';
 
 // eslint-disable-next-line react-refresh/only-export-components
 export default () => (
-  <Tabs>
+  <Tabs className={styles.root}>
     <TabList>
       <Tab>Title 1</Tab>
       <Tab>Title 2</Tab>
