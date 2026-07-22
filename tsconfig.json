@@ -5,6 +5,7 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
     "jsx": "react-jsx",
     "moduleResolution": "bundler",
     "target": "ESNext",
