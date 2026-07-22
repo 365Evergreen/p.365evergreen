@@ -11,15 +11,18 @@
   },
   "dependencies": {
     "@fluentui/react-icons": "^2.0.333",
+    "@radix-ui/themes": "^3.3.0",
     "@rjsf/core": "^6.7.0",
     "@rjsf/utils": "^6.7.0",
     "@rjsf/validator-ajv8": "^6.7.0",
     "@tailwindcss/vite": "^4.3.3",
     "lucide-react": "^1.25.0",
+    "radix-ui": "^1.6.4",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-router-dom": "^7.18.1",
     "react-tabs": "^6.1.1",
+    "tailwind-merge": "^3.6.0",
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
