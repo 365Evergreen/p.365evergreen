@@ -1,0 +1,168 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  overflow: hidden; /* Ensures thumbnail corners match card radius */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: translateY(-4px);
+}
+
+/* Thumbnail Container */
+.thumbnailWrapper {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background-color: #f3f4f6;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .thumbnail {
+  transform: scale(1.05);
+}
+
+/* Floating Icon Placement */
+.iconWrapper {
+  position: absolute;
+  bottom: -20px;
+  left: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.75rem;
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card:hover .iconWrapper {
+  background-color: #8e1731;
+  color: #ffffff;
+}
+
+/* Text Content Area */
+.content {
+  padding: 2rem 1.5rem 1.5rem 1.5rem; /* Large top padding to clear floating icon */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 450;
+  color: #111827;
+  transition: color 0.3s ease;
+}
+
+.card:hover .title {
+  color: #2c2c2c;
+}
+
+.description {
+  margin: 0 0 1.5rem 0;
+  color: #4b5563;
+  line-height: 1.6;
+  font-size: 0.875rem;
+  flex-grow: 1; /* Pushes the CTA to the absolute bottom of the container */
+}
+
+/* CTA Button Styling */
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  background-color: #f3f4f6;
+  color: #111827;
+  transition: all 0.2s ease;
+}
+
+.ctaButton:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.ctaIcon {
+  margin-left: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.ctaButton:hover .ctaIcon {
+  transform: translateX(3px);
+}
+.gridSection {
+  padding: 4rem 1.5rem;
+  background-color: #f9fafb;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grid Container Setup */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 column default (mobile) */
+  gap: 2rem;
+}
+
+/* Tablet Screens (640px and up) */
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+}
+
+/* Desktop Screens (1024px and up) */
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns strictly */
+  }
+}
+
+/* Header Text Styles */
+.header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 450;
+  color: #506694;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: #4b5563;
+  max-width: 36rem;
+  margin: 0 auto;
+  line-height: 1.5;
+}

@@ -1,0 +1,43 @@
+{
+  "id": "services-tabs",
+  "type": "tabs",
+  "title": "What we do",
+  "blurb": "We provide a range of services to help organizations leverage Microsoft technologies effectively.",
+  "variant": "default",
+  "defaultTab": "sharepoint",
+  "items": [
+    {
+      "id": "sharepoint",
+      "label": "SharePoint",
+      "icon": "Folder",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "SharePoint intranet design and implementation."
+        }
+      ]
+    },
+    {
+      "id": "power-platform",
+      "label": "Power Platform",
+      "icon": "Workflow",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Power Apps, Power Automate and Copilot solutions."
+        }
+      ]
+    },
+    {
+      "id": "copilot",
+      "label": "Copilot",
+      "icon": "Bot",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Governance, adoption and agent implementation."
+        }
+      ]
+    }
+  ]
+}

@@ -167,6 +167,7 @@ export interface PostsIndexDoc {
 }
 
 /** Props every block component receives. */
+
 export interface BlockComponentProps {
   block: PageBlock
 }
@@ -192,4 +193,36 @@ export interface FormsIndexDoc {
 export interface FormDefinition {
   metadata: FormIndexEntry
   schema: FormSchema
+}
+
+// ---------------------------------------------------------------------------
+// Tabs (content/tabs/index.json)
+// ---------------------------------------------------------------------------
+
+export interface TabIndexEntry {
+  id: string
+  title?: string
+  pageId?: string
+  pageTitle?: string
+  pageUrl?: string
+  submitUrl?: string
+}
+
+export interface TabsIndexDoc {
+  version: number
+  generatedAt?: string
+  tabs: TabIndexEntry[]
+  pageId?: string
+}
+
+export interface TabDefinition {
+  id: string
+  pageId?: string
+  title?: string
+}
+
+export interface TabContent {
+  id: string  
+  title: string
+  content: PageBlock[]
 }

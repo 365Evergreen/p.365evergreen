@@ -1,6 +1,6 @@
 import { useMemo, useState, useEffect } from 'react'
-import { loadNavigation } from '../content/contentClient'
-import type { NavigationItemDocument } from '../content/contentClient'
+import { loadNavigation } from '../services/content/contentClient'
+import type { NavigationItemDocument } from '../services/content/contentClient'
 
 type RawNavigationItem = {
   id?: string

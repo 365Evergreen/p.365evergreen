@@ -1,6 +1,6 @@
 import { useCallback } from 'react'
 import { useAsyncData } from '../../lib/useAsyncData'
-import { loadPageBySlug } from '../../content/contentClient'
+import { loadPageBySlug } from '../../services/content/contentClient'
 import { BlockRenderer } from '../../components/Renderers/BlockRenderer'
 import SeoHead from '../../components/SeoHead'
 import styles from './HowWeDoItPage.module.css'

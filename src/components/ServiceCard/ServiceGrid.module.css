@@ -1,0 +1,51 @@
+.gridSection {
+  padding: 4rem 1.5rem;
+  background-color: #f9fafb;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grid Container Setup */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 column default (mobile) */
+  gap: 2rem;
+}
+
+/* Tablet Screens (640px and up) */
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+}
+
+/* Desktop Screens (1024px and up) */
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns strictly */
+  }
+}
+
+/* Header Text Styles */
+.header {
+  text-align: left;
+  margin-bottom: 3.5rem;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: #4b5563;
+  max-width: 36rem;
+  margin: 0 auto;
+  line-height: 1.5;
+}

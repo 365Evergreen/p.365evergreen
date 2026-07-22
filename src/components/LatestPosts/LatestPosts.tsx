@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAsyncData } from '../../lib/useAsyncData'
-import { loadCategories } from '../../content/contentClient'
+import { loadCategories } from '../../services/content/contentClient'
 import styles from './LatestPosts.module.scss'
 import type { LatestPostsProps } from './LatestPosts.types'
 

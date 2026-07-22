@@ -1,3 +1,62 @@
-.root{
-    display: flex;
+.tabs {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+.tabList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tabButton {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 0.75rem 1rem;
+  transition: 0.2s;
+  font-weight: 500;
+}
+
+.tabButton:hover {
+  opacity: 0.8;
+}
+
+.active {
+  font-weight: 600;
+}
+
+.default .tabButton {
+  border-bottom: 2px solid transparent;
+}
+
+.default .active {
+  border-bottom-color: var(--colour-primary);
+}
+
+.pills .tabButton {
+  border-radius: 999px;
+  background: var(--colour-surface);
+}
+
+.pills .active {
+  background: var(--colour-primary);
+  color: white;
+}
+
+.underline .tabButton {
+  border-bottom: 3px solid transparent;
+}
+
+.underline .active {
+  border-bottom-color: var(--colour-primary);
+}
+
+.panel {
+  padding-top: 1rem;
 }

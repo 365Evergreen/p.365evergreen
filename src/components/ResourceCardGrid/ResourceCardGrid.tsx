@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import type { ResourceItem } from '../../content/contentClient'
+import type { ResourceItem } from '../../services/content/contentClient'
 import styles from './ResourceCardGrid.module.css'
 
 type ResourceCardGridProps = {

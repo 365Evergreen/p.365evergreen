@@ -14,7 +14,7 @@ import type {
   PostsIndexDoc,
   SeoMeta,
   Status,
-} from '../types/content'
+} from '../../types/content'
 
 const CONTENT_BASE_URL: string = (
   import.meta.env.VITE_CONTENT_BASE_URL || 'https://cdn.365evergreen.com/content'
@@ -436,7 +436,9 @@ async function fetchJson<T>(url: string): Promise<T> {
   try {
     return (await res.json()) as T
   } catch (error) {
-    throw new Error(`Failed to parse JSON from ${url}: ${error instanceof Error ? error.message : String(error)}`, { cause: error })
+    const err = new Error(`Failed to parse JSON from ${url}: ${error instanceof Error ? error.message : String(error)}`)
+    if (error instanceof Error) err.cause = error
+    throw err
   }
 }
 
@@ -930,10 +932,6 @@ export function filterPosts(posts: readonly Post[], filter: PostFilter): Post[] 
     }
     return true
   })
-}
-
-export function collectTags(posts: readonly Post[]): string[] {
-  return Array.from(new Set(posts.flatMap((p) => p.tags))).sort((a, b) => a.localeCompare(b))
 }
 
 export function collectCategories(posts: readonly Post[]): string[] {

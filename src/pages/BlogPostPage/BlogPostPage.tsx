@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import { useAsyncData } from '../../lib/useAsyncData'
-import { loadPostBySlug, loadPostBody } from '../../content/contentClient'
+import { loadPostBySlug, loadPostBody } from '../../services/content/contentClient'
 import { formatDate } from '../../lib/format'
 import SeoHead from '../../components/SeoHead'
 import { BlockRenderer } from '../../components/Renderers/BlockRenderer'

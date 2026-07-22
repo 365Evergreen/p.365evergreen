@@ -1,6 +1,6 @@
 import { useCallback } from 'react'
 import { useAsyncData } from '../../lib/useAsyncData'
-import { loadPageBySlug, loadResourcesIndex } from '../../content/contentClient'
+import { loadPageBySlug, loadResourcesIndex } from '../../services/content/contentClient'
 import { BlockRenderer } from '../../components/Renderers/BlockRenderer'
 import ResourceCardGrid from '../../components/ResourceCardGrid'
 import SeoHead from '../../components/SeoHead'

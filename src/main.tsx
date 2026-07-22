@@ -4,7 +4,7 @@ import './index.css'
 import './styles/blocks.scss'
 import './styles/site.scss'
 import App from './App.tsx'
-import { loadPagesIndex, loadPostsIndex } from './content/contentClient'
+import { loadPagesIndex, loadPostsIndex } from './services/content/contentClient.ts'
 
 // Eager load content indexes
 loadPagesIndex().catch(console.error)

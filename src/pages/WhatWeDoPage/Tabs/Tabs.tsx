@@ -1,5 +1,7 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+//import contentClient from '../../../content/contentClient'
 import styles from './tabs.module.css';
+
 
 // eslint-disable-next-line react-refresh/only-export-components
 export default () => (

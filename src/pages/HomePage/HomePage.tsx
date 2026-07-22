@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Drawer from '../../components/Drawer/Drawer'
 //import EvergreenMoment from '../../components/EvergreenMoment'
 import Hero from '../../components/Hero/Hero'
+import { ServiceGrid } from '../../components/ServiceCard/ServiceGrid'
 //import HomepageCta from '../../components/HomepageCta'
 //import LatestPosts from '../../components/LatestPosts'
 //import Outcome from '../../components/Outcome'
@@ -26,14 +27,12 @@ export default function HomePage() {
 
         <div className="homeMainContent">
           <div className="homeMainContent__inner">
-            <div className="homeMainContent__inner__content">
-              <h2>We help organisations get the most out of Microsoft 365</h2>
-              <p>We help organisations get the most out of Microsoft 365 by providing practical guidance, training, and support to help them work smarter, not harder.</p>
-            </div>
+            <ServiceGrid />
             <GetInTouch
             blobStorageUrl="https://cdn.365evergreen.com/content/forms/00001.json" />
           </div>
         </div>
+        
 
 
 

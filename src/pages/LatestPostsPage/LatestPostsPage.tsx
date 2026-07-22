@@ -5,10 +5,9 @@ import { formatDate } from '../../lib/format'
 import styles from './LatestPostsPage.module.css'
 import SeoHead from '../../components/SeoHead'
 import {
-  collectTags,
   loadCategories,
   loadLatestPosts,
-} from '../../content/contentClient'
+} from '../../services/content/contentClient'
 
 type ViewMode = 'grid' | 'list'
 const CONTENT_BASE_URL = (
@@ -56,7 +55,11 @@ export default function LatestPostsPage() {
   const [selectedCategorySlugs, setSelectedCategorySlugs] = useState<string[]>(() =>
     normalizedCategoryParam ? [normalizedCategoryParam] : [],
   )
-  const tags = useMemo(() => (posts ? collectTags(posts) : []), [posts])
+  const tags = useMemo(() => {
+    if (!posts) return []
+    const allTags = posts.flatMap((post) => post.tags)
+    return Array.from(new Set(allTags)).sort((a, b) => a.localeCompare(b))
+  }, [posts])
   const enabledCategorySlugs = useMemo(() => {
     if (!posts) return new Set<string>()
     return new Set(
