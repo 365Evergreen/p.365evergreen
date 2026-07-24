@@ -1,4 +1,4 @@
-export interface HomepageCtaProps {
+export interface HomePageCta1Props {
   heading: string
   supportingText: string
   buttonLabel: string

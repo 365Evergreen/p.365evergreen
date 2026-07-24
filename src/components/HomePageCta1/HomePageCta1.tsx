@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom'
-import styles from './HomepageCta1.module.css'
-import type { HomepageCtaProps } from './HomePageCta.types'
+import styles from './HomePageCta1.module.css'
+import type { HomePageCta1Props } from './HomePageCta1.types'
 
-export default function HomepageCta({
+export default function HomePageCta1({
   heading,
   supportingText,
   buttonLabel,
   buttonLink,
   onButtonClick,
-}: HomepageCtaProps) {
+}: HomePageCta1Props) {
   return (
     <section className={styles.section} aria-labelledby="homepage-cta-heading">
       <div className={styles.content}>
