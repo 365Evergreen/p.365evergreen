@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import styles from './HomepageCta.module.css'
+import styles from './HomepageCta1.module.css'
 import type { HomepageCtaProps } from './HomePageCta.types'
 
 export default function HomepageCta({
