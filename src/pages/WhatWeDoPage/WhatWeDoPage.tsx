@@ -6,6 +6,7 @@ import SeoHead from '../../components/SeoHead'
 import styles from './WhatWeDoPage.module.css'
 import { Accordion as FluentAccordion } from './Accordion/Accordion'
 import Tabs from './Tabs/Tabs';
+import { ModernWorkplace } from '../../components/ModernWorkplace/ModernWorkplace'
 //import TabsList from '../../components/TabsList/TabsList'
 
 const PAGE_SLUG = 'what-we-do'
@@ -70,6 +71,8 @@ export default function WhatWeDoPage() {
       />
 
       <div className={styles.content}>
+        <ModernWorkplace
+        />
         <BlockRenderer blocks={page.blocks} />
       </div>
       <div className={styles.accordion}>

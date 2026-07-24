@@ -4,24 +4,37 @@ import styles from './HeroSlideShow.module.css';
 const slideData = [
   {
     image: 'https://cdn.365evergreen.com/content/media/modern-workplace.webp',
-    title: 'Explore the Great Outdoors',
-    subtitle: 'Discover breathtaking landscapes and hidden trails.',
+    title: 'Creating the modern workplace',
+    subtitle: 'We partner with organisations to transform their work with modern tools.',
     ctaText: 'Start Journey',
     ctaLink: '#journey'
   },
   {
     image: 'https://cdn.365evergreen.com/content/media/power-automate.webp',
-    title: 'Embrace the Serenity',
-    subtitle: 'Find peace away from the chaotic city life.',
+    title: 'Automating the boring stuff',
+    subtitle: 'We help businesses streamline processes and improve efficiency with automation.',
     ctaText: 'Find Peace',
     ctaLink: '#peace'
   },
   {
     image: 'https://cdn.365evergreen.com/content/media/power-apps.webp',
-    title: 'Connect with Nature',
-    subtitle: 'Experience pristine ecosystems firsthand.',
+    title: 'Building with Power Apps',
+    subtitle: 'We help organisations build custom solutions with Power Apps.',
     ctaText: 'Learn More',
     ctaLink: '#about'
+  },
+  {
+    image: 'https://cdn.365evergreen.com/content/media/power-bi.webp',
+    title: 'Making sense of data',
+    subtitle: 'We help organisations make data-driven decisions with Power BI.',
+    ctaText: 'Explore Insights',
+    ctaLink: '#insights'
+  },{
+    image: 'https://cdn.365evergreen.com/content/media/security.webp',
+    title: 'Securing your business',
+    subtitle: 'We help organisations protect their data and comply with regulations.',
+    ctaText: 'Get Protected',
+    ctaLink: '#security'
   }
 ];
 

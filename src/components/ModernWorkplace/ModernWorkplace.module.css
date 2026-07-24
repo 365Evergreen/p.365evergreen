@@ -2,6 +2,62 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 4rem;
   background-color: #f5f5f5;
+}
+
+.accordionPanel {
+  display: flex;   /* Aligns children horizontally */
+  gap: 15px;       /* Adds space between your columns */
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+
+.panelColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+  /* Adds space between items in the column */
+}
+.panelColumn{
+  flex: 1; /* Ensures both columns take equal space */
+  padding: 10px; /* Optional: Adds padding inside each column */
+}
+.panelColumn h2 {
+  margin: 0; 
+  font-weight: 200; /* Removes default margin from headings */
+}
+.panelColumn h3 {
+  margin: 0; 
+  font-weight: 200; /* Removes default margin from headings */
+}
+.panelColumn p {
+  margin: 0; 
+   font-weight: 100; /* Removes default margin from paragraphs */
+}
+.panelColumn a {
+  color: #0078d4; /* Example link color */
+  text-decoration: none; /* Removes underline from links */
+}
+.panelImage {
+  max-width: 100%;
+  height: auto;
+}
+
+.panelImage .imgageWrapper {
+  width: 100%;         /* Forces image to scale down to the container width */
+  height: auto;        /* Maintains the original aspect ratio */
+  display: block;
+  border-radius: 8px;  /* Optional inner corner rounding */
+  object-fit: cover;   /* Ensures clean filling if custom heights are applied */
+}
+
+/* Responsive adjustment for tablets and mobile */
+@media (max-width: 768px) {
+  .layout-container {
+    flex-direction: column; /* Stacks column 1 on top of column 2 on small screens */
+  }
 }

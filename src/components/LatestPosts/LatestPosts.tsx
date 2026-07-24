@@ -60,9 +60,7 @@ export default function LatestPosts({
           <h2 id="latest-posts-heading" className={styles.title}>
             {heading}
           </h2>
-          <p className={styles.intro}>
-            Recent thinking on clarity, structure, and practical Microsoft 365 outcomes.
-          </p>
+          
         </div>
         {viewAllLabel && viewAllLink ? (
           <Link className={styles.viewAll} to={viewAllLink}>

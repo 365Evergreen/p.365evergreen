@@ -5,13 +5,18 @@ import {
   AccordionItem,
   AccordionPanel,
 } from "@fluentui/react-components";
+import styles from './ModernWorkplace.module.css';
 
-export const Default = (): JSXElement => (
+export const ModernWorkplace = (): JSXElement => (
   <Accordion>
     <AccordionItem value="1">
       <AccordionHeader>Accordion Header 1</AccordionHeader>
       <AccordionPanel>
-        <div>Accordion Panel 1</div>
+        <div className={styles.accordionPanel}>
+          <div className={styles.panelColumn}><p>Accelerate AI innovation by securely migrating and modernizing your IT estate.</p>
+          </div>
+          <div className={styles.panelColumn}><img className={styles.panelImage} src="https://cdn.365evergreen.com/content/media/modern-workplace.webp" alt="Modern Workplace" /></div>
+        </div>
       </AccordionPanel>
     </AccordionItem>
     <AccordionItem value="2">
@@ -28,3 +33,4 @@ export const Default = (): JSXElement => (
     </AccordionItem>
   </Accordion>
 );
+export { ModernWorkplace as default };
