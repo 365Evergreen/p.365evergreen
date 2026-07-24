@@ -1,11 +1,30 @@
 .root {
-    padding: 12px 24px;
-    border-width: medium medium 2px;
-    border-style: none none solid;
-    border-color: currentcolor currentcolor rgb(105 105 106);
-    border-image: none;
-    background: transparent;
-    cursor: pointer;
-    font-weight: 600;
-    color: rgb(71 73 75);
+	padding: 4rem;
+	border-width: medium medium 2px;
+	border-style: none none solid;
+	border-color: currentcolor currentcolor rgb(105 105 106);
+	border-image: none;
+	background: transparent;
+	cursor: pointer;
+	font-weight: 600;
+	color: rgb(71 73 75);
+}
+
+.button {
+	padding: 0 4rem;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	font-weight: 300;
+	color: #1b1b1b;
+}
+
+.button .active {
+	padding: 12px 24px;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	border-bottom: 12px solid #3182ce;
+	font-weight: 400;
+	color: #4a4a4a;
 }
