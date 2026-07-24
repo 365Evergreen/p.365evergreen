@@ -1,0 +1,46 @@
+{
+  "id": "contact-form",
+  "type": "form",
+  "layout": {
+    "container": "two-column",
+    "gap": "large",
+    "columns": [
+      { "id": "content", "width": "7" },
+      { "id": "form", "width": "5" }
+    ]
+  },
+  "form": {
+    "layout": {
+      "columns": 2,
+      "gap": "large"
+    },
+    "sections": [
+      {
+        "id": "name",
+        "title": "Contact information",
+        "description": "Your name",
+        "fields": [
+          { "id": "firstName", "type": "text", "label": "First Name", "columnSpan": 1 },
+          { "id": "lastName", "type": "text", "label": "Last Name", "columnSpan": 1 }
+        ]
+      },
+      {
+        "id": "contact",
+        "title": "Contact information",
+        "description": "How to reach you",
+        "fields": [
+          { "id": "email", "type": "email", "label": "Email", "columnSpan": 1 },
+          { "id": "phone", "type": "phone", "label": "Phone number", "columnSpan": 1 }
+        ]
+      },
+      {
+        "id": "message",
+        "title": "Message",
+        "description": "Your message",
+        "fields": [
+          { "id": "message", "type": "textarea", "label": "Message", "columnSpan": 2, "rows": 6 }
+        ]
+      }
+    ]
+  }
+}

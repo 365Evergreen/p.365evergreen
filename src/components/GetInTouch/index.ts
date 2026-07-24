@@ -1,1 +1,1 @@
-export { GetInTouch as default, GetInTouch } from './GetInTouch'
+export { GetInTouch } from './GetInTouch';

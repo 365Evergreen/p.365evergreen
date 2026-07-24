@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import type { HeroProps } from './Hero.types'
-import styles from './Hero.module.scss'
+import styles from './Hero.module.css'
+import { ArrowRight } from 'lucide-react'
 
 export default function Hero({
   title,
@@ -18,7 +19,7 @@ export default function Hero({
     <section className={styles.hero} aria-labelledby="home-hero-title">
       <div className={styles.content}>
         <div className={styles.copy}>
-                  <h1 id="home-hero-title" className={styles.title}>
+          <h1 id="home-hero-title" className={styles.title}>
             {title}
           </h1>
           {subtitle ? <p className={styles.subtitle}>{subtitle}</p> : null}
@@ -26,7 +27,8 @@ export default function Hero({
         {ctaLabel ? (
           onCtaClick ? (
             <button type="button" className={styles.cta} onClick={onCtaClick}>
-              {ctaLabel}
+              {ctaLabel} <ArrowRight />
+     
             </button>
           ) : ctaLink ? (
             <Link to={ctaLink} className={styles.cta}>

@@ -6,6 +6,7 @@ import SeoHead from '../../components/SeoHead'
 import styles from './HowWeDoItPage.module.css'
 import { Accordion } from './Accordion/Accordion'
 import Tabs from './Tabs/Tabs';
+import HeroSlideshow from '../../components/HeroSlideShow/HeroSlideShow'
 //import TabsList from '../../components/TabsList/TabsList'
 
 const PAGE_SLUG = 'how-we-do-it'
@@ -68,7 +69,7 @@ export default function WhatWeDoPage() {
         noindex={page.seo?.noindex}
         ogType={page.seo?.openGraph?.type ?? 'website'}
       />
-
+     <HeroSlideshow />
       <div className={styles.content}>
         <div className={styles.header}>
           <h1>{page.title}</h1>
@@ -85,6 +86,7 @@ export default function WhatWeDoPage() {
         <div className={styles.tabs}>
            <Tabs />
         </div>
+   
       </div>
 
     </section>

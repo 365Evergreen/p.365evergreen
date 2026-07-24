@@ -17,7 +17,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
   const ArrowIcon = LucideIcons.ArrowRight as React.ComponentType<{ size?: number | string; className?: string }>;
 
   return (
-    <article className={styles.card}>
+    <article className={styles.card}> <h3 className={styles.title}>{title}</h3>
       {/* Visual Header Zone */}
       <div className={styles.thumbnailWrapper}>
         <img 

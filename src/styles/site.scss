@@ -122,7 +122,7 @@ textarea:focus-visible {
 .site-main {
   max-width: var(--container);
   margin-inline: auto;
-  padding: 1.25rem 1rem 3rem;
+  padding: 1.25rem 0;
 }
 
 .marketing-page,
@@ -363,7 +363,7 @@ textarea:focus-visible {
 
 @media (min-width: 760px) {
   .site-main {
-    padding: 2rem 1.5rem 4rem;
+    padding: 0;
   }
 
   .site-nav {

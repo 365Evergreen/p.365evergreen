@@ -10,12 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fluentui/react-components": "^9.74.4",
     "@fluentui/react-icons": "^2.0.333",
     "@radix-ui/themes": "^3.3.0",
     "@rjsf/core": "^6.7.0",
     "@rjsf/utils": "^6.7.0",
     "@rjsf/validator-ajv8": "^6.7.0",
     "@tailwindcss/vite": "^4.3.3",
+    "adaptivecards": "^3.0.6",
     "lucide-react": "^1.25.0",
     "radix-ui": "^1.6.4",
     "react": "^19.2.7",

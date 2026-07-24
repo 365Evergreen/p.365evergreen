@@ -15,7 +15,8 @@ dist-ssr
 swa-cli.config.json
 review.py
 review-findings.json
-deploy.ps1
+
+
 
 
 

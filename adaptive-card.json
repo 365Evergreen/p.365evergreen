@@ -1,0 +1,42 @@
+{
+  "id": "contact-form",
+  "type": "form",
+  "body": [
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "text",
+              "id": "element-1784740144960-g81xxx26y-firstname",
+              "placeholder": "Enter text...",
+              "label": "First name"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "text",
+              "id": "element-1784740144960-g81xxx26y-surname",
+              "placeholder": "Enter text...",
+              "label": "Surname"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "textArea",
+      "id": "element-1784740228901-u5648e1kw",
+      "placeholder": "Enter text...",
+      "label": "Text Input",
+      "isMultiline": true
+    }
+  ]
+}
