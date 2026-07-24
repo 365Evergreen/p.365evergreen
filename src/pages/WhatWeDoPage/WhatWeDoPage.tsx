@@ -4,7 +4,7 @@ import { loadPageBySlug } from '../../services/content/contentClient'
 import { BlockRenderer } from '../../components/Renderers/BlockRenderer'
 import SeoHead from '../../components/SeoHead'
 import styles from './WhatWeDoPage.module.css'
-import { Accordion } from './Accordion/Accordion'
+import { Accordion as FluentAccordion } from './Accordion/Accordion'
 import Tabs from './Tabs/Tabs';
 //import TabsList from '../../components/TabsList/TabsList'
 
@@ -73,7 +73,7 @@ export default function WhatWeDoPage() {
         <BlockRenderer blocks={page.blocks} />
       </div>
       <div className={styles.accordion}>
-        <Accordion
+        <FluentAccordion
           items={items}
           allowMultiple={true}
           defaultOpen={["overview"]}
@@ -81,6 +81,14 @@ export default function WhatWeDoPage() {
         <div className={styles.tabs}>
            <Tabs />
         </div>
+        <div className={styles.accordion}>
+          <FluentAccordion
+            items={items}
+            allowMultiple={true}
+            defaultOpen={["overview"]}
+          />
+        </div>
+
       </div>
 
     </section>
