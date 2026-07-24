@@ -12,6 +12,7 @@
   "dependencies": {
     "@fluentui/react-components": "^9.74.4",
     "@fluentui/react-icons": "^2.0.333",
+    "@fluentui/web-components": "^3.0.2",
     "@radix-ui/themes": "^3.3.0",
     "@rjsf/core": "^6.7.0",
     "@rjsf/utils": "^6.7.0",
