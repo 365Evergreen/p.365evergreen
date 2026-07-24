@@ -1,0 +1,10 @@
+.root {
+    padding: 12px 24px; 
+    border-width: medium medium 2px;  
+    border-style: none none solid; 
+    border-color: currentcolor currentcolor rgb(105 105 106); 
+    border-image: none; 
+    background: transparent; 
+    cursor: pointer; 
+    font-weight: 600; 
+    color: rgb(71 73 75); }
