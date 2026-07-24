@@ -201,7 +201,7 @@ h2 {
 }
 
 .button--primary {
-  background: var(--accent);
+  background: Green;
   color: var(--text-inverted);
 }
 
