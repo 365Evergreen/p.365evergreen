@@ -36,19 +36,20 @@ export default function HomePage() {
           <div className="homeMainContent__inner">
             <div className="max-w-7xl mx-auto px-6 lg:px-8 bg-black-100">
               <ServiceGrid />
-              <HowWeDoIt />
-
+              <div className="max-w-7xl mx-auto px-6 lg:px-8 bg-black-100">
+                <HowWeDoIt />
+              </div>
 
             </div>
 
 
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 bg-black-100">
               {/* Six most recent published posts */}
               <LatestPosts />
             </div>
 
 
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 bg-black-100">
               <GetInTouch
                 {...{
                   leftColumn: (
@@ -63,15 +64,16 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <HomepageCta
-          heading="Start your Microsoft 365 journey with Evergreen"
-          supportingText="We partner with organisations to optimise, automate, govern, and adopt Microsoft 365 — with measurable outcomes in weeks, not years."
-          buttonLabel="Start your journey"
-          onButtonClick={openDrawer}
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 bg-black-100">
+          <HomepageCta
+            heading="Start your Microsoft 365 journey with Evergreen"
+            supportingText="We partner with organisations to optimise, automate, govern, and adopt Microsoft 365 — with measurable outcomes in weeks, not years."
+            buttonLabel="Start your journey"
+            onButtonClick={openDrawer}
 
-        />
+          />
 
-
+        </div>
 
       </div>
       <Drawer

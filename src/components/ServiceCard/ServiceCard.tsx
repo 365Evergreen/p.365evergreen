@@ -33,7 +33,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
 
       {/* Main Copy Context Box */}
       <div className={styles.content}>
-        <h3 className={styles.title}>{title}</h3>
+        
         <p className={styles.description}>{description}</p>
         
         {/* Call to Action Anchor Link */}

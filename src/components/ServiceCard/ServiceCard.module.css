@@ -67,8 +67,9 @@
 }
 
 .title {
-  margin: 0 0 0.5rem 0;
-  font-size: 1rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  font-size: 2rem;
   font-weight: 450;
   color: #111827;
   transition: color 0.3s ease;
