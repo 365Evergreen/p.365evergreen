@@ -4,9 +4,9 @@ import { loadPostBySlug, loadPostBody } from '../../services/content/contentClie
 import { formatDate } from '../../lib/format'
 import SeoHead from '../../components/SeoHead'
 import { BlockRenderer } from '../../components/Renderers/BlockRenderer'
-import RelatedPostsGrid from './RelatedPostsGrid'
+import LatestPosts from '../HomePage/LatestUpdates/LatestUpdates'
 import styles from './BlogPostPage.module.css'
-
+//import { ArrowLeft } from 'lucide-react'
 
 function BlogPostPage() {
   const { slug = '' } = useParams<{ category?: string; slug: string }>()
@@ -42,7 +42,7 @@ function BlogPostPage() {
           <Link to="/blog" className={styles.back}>
             ← Back to blog
           </Link>
-          <h1 className={styles.heading}>Unable to load article</h1>
+          <h1 className={styles.postTitle}>Unable to load article</h1>
           <p className={styles.notFound} role="alert">
             {message}
           </p>
@@ -55,10 +55,10 @@ function BlogPostPage() {
     return (
       <div className={styles.page}>
         <div className={styles.inner}>
-          <h1 className={styles.heading}>Article not found</h1>
+          <h1 className={styles.postTitle}>Article not found</h1>
           <p className={styles.notFound}>
             The article you are looking for does not exist.{' '}
-            <Link to="/blog" className={styles.backLink}>
+            <Link to="/blog" className={styles.back}>
               Back to blog
             </Link>
           </p>
@@ -79,17 +79,13 @@ function BlogPostPage() {
         ogType={post.seo?.openGraph?.type ?? 'article'}
       />
       <div className={styles.inner}>
-        <Link to="/blog" className={styles.back}>
-          ← Back to blog
-        </Link>
         <div className={styles.meta}>
-          {post.author?.name ? <span>{post.author.name}</span> : null}
           <time className={styles.date} dateTime={post.publishDate}>
             {formatDate(post.publishDate)}
           </time>
           {post.readingTime ? <span>{post.readingTime} min read</span> : null}
         </div>
-        <h1 className={styles.heading}>{post.title}</h1>
+        <h1 className={styles.postTitle}>{post.title}</h1>
         {post.featuredImage ? (
           <img
             className={styles.featuredImage}
@@ -121,12 +117,7 @@ function BlogPostPage() {
           </p>
         ) : null}
       </div>
-      <RelatedPostsGrid
-        heading="Related posts"
-        posts={[]}
-        viewAllLabel="View all posts"
-        viewAllLink="/blog"
-      />
+      <LatestPosts />
     </div>
   )
 }

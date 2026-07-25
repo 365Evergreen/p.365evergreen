@@ -130,8 +130,7 @@ button:focus-visible {
 }
 
 .main-content {
-  padding: 0;
-
+  padding-inline: clamp(1rem, 4vw, 2rem);
 }
 
 html.pe-editor-fullwidth .main-content,
@@ -163,7 +162,16 @@ html.pe-editor-fullwidth .page-shell {
 .page-shell--narrow {
   max-width: 760px;
   margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 2rem);
 }
+
+.homeMainContent {
+  display: grid;
+  gap: 1.5rem;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+}
+
+
 
 h1,
 h2,
