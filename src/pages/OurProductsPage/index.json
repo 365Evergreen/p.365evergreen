@@ -1,0 +1,20 @@
+{
+    "Products": [
+        {
+            "id": "00001",
+            "name": "Greetings webpart",
+            "type": "webpart",
+            "slug": "resources/download-the-greetings-web-part",
+            "thumbnail": "resources/downloads/spx-greetngs-web-part/thumbnail.png",
+            "description": "A webpart that displays a greeting message based on the time of day."
+        },
+        {
+            "id": "00002",
+            "name": "Governance eBook",
+            "type": "document",
+            "slug": "resources/download-the-greetings-web-part",
+            "thumbnail": "resources/downloads/governance-ebook/thumbnail.png",
+            "description": "An eBook that provides guidance on governance best practices."
+        }
+    ]
+}

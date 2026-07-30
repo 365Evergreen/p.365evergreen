@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import styles from './HomePage.module.css'
 //import contentClient from '../../services/content/contentClient'
 //import Contact from '../../components/Contact'
 import Drawer from '../../components/Drawer/Drawer'
@@ -26,7 +27,7 @@ export default function HomePage() {
 
 
   return (
-    <><div className="home-page-hero">
+    <><div className={styles.heroSlideshowContainer}>
 
       <HeroSlideshow />
     </div>

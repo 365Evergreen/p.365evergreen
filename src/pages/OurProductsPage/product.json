@@ -1,0 +1,58 @@
+{
+  "id": "00001",
+  "title": "What we do",
+  "description": "Security, endpoint management, and Copilot adoption for Microsoft 365 — delivered with measurable outcomes.",
+  "slug": "/what-we-do",
+  "status": "published",
+  "publishDate": "2026-07-18",
+  "updatedDate": "2026-07-18",
+  "keywords": ["Microsoft 365 services", "Intune", "Conditional Access", "Copilot adoption"],
+  "featuredImage": {
+    "url": "https://cdn.365evergreen.com/images/showcase/og.jpg",
+    "alt": "365 Evergreen consultants at work",
+    "width": 1200,
+    "height": 630
+  },
+  "seo": {
+    "metaTitle": "What we do · 365 Evergreen",
+    "metaDescription": "Security, endpoint management, and Copilot adoption for Microsoft 365 — delivered with measurable outcomes.",
+    "canonicalUrl": "https://p.365evergreen.com/what-we-do",
+    "openGraph": {
+      "type": "website"
+    }
+  },
+  "blocks": [
+    {
+      "id": "26c47016-a6aa-4e64-a787-e6d77ac1c376",
+      "type": "heading",
+      "level": "2",
+      "text": "What we do"
+    },
+    {
+      "id": "89465de1-3068-4cbe-8626-1677c83e6af9",
+      "type": "image",
+      "src": "",
+      "alt": "",
+      "url": "https://sa365evergreenwebsite.blob.core.windows.net/contentdrafts/pages/00002/1784338868006-copilot-in-microsoft-365.png"
+    },
+    {
+      "id": "972dce74-1c6e-4c94-890b-b8df26e9ceca",
+      "type": "paragraph",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "id": "5eded1f5-e69f-4909-a72b-e3cbe50da53b",
+      "type": "table",
+      "rows": [
+        [
+          "Column 1",
+          "Column 2"
+        ],
+        [
+          "Row 2",
+          "Row 2"
+        ]
+      ]
+    }
+  ]
+}

@@ -90,8 +90,29 @@ function normalizeStringField(value: unknown): string | undefined {
   return normalized
 }
 
+function parseStatus(value: unknown): Status | undefined {
+  if (typeof value !== 'string') {
+    return undefined
+  }
+
+  switch (value.trim().toLowerCase()) {
+    case 'draft':
+    case 'ready to draft':
+    case 'ready-to-draft':
+      return 'draft'
+    case 'scheduled':
+      return 'scheduled'
+    case 'published':
+      return 'published'
+    case 'archived':
+      return 'archived'
+    default:
+      return undefined
+  }
+}
+
 function isStatus(value: string): value is Status {
-  return value === 'draft' || value === 'scheduled' || value === 'published' || value === 'archived'
+  return parseStatus(value) !== undefined
 }
 
 const DEFAULT_FETCH_TIMEOUT_MS = 10000
@@ -400,8 +421,7 @@ function normalizePostsIndexDoc(payload: unknown): PostsIndexDoc {
       const id = String(rawId)
       const title = typeof entry.title === 'string' ? entry.title : 'Untitled'
       const slug = typeof entry.slug === 'string' ? entry.slug : slugify(title) || id
-      const status =
-        typeof entry.status === 'string' && isStatus(entry.status) ? entry.status : 'published'
+      const status = parseStatus(entry.status) ?? 'published'
 
       return {
         ...entry,
@@ -681,10 +701,7 @@ function normalizePostContent(payload: unknown, entry: PostIndexEntry): Post {
         : undefined
   const normalizedSlug = rawSlug ? normalizePathSlug(rawSlug) : undefined
 
-  const status =
-    typeof metadata.status === 'string' && isStatus(metadata.status)
-      ? metadata.status
-      : entry.status
+  const status = parseStatus(metadata.status) ?? entry.status
 
   const title = typeof metadata.title === 'string' ? metadata.title : entry.title
   const description =
@@ -779,12 +796,10 @@ export async function loadCategories(): Promise<CategoriesDoc> {
   return loadCategoriesIndex()
 }
 
-/** A single published post by slug, or undefined. */
+/** A single post by slug, or undefined. */
 export async function loadPostBySlug(slug: string): Promise<Post | undefined> {
   const index = await loadPostsIndex()
-  const entry = index.posts.find(
-    (post) => post.slug === slug && (post.status === 'draft' || post.status === 'published'),
-  )
+  const entry = index.posts.find((post) => post.slug === slug && post.status !== 'archived')
   if (!entry) return undefined
   if (!postDetailPromises.has(slug)) {
     const postId = entry.id || slug
@@ -792,7 +807,7 @@ export async function loadPostBySlug(slug: string): Promise<Post | undefined> {
     postDetailPromises.set(slug, fetchJson<unknown>(source).then((payload) => normalizePostContent(payload, entry)))
   }
   const post = await postDetailPromises.get(slug)!
-  return post.status === 'published' ? post : undefined
+  return post.status === 'archived' ? undefined : post
 }
 
 /** Resolves a post body to a string, fetching the body blob if it lives out-of-line. */
