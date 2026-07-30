@@ -1,0 +1,30 @@
+.content {
+  width: 100%;
+  padding: var(--space-10) 0;
+}
+
+.header {
+  max-width: 940px;
+  margin: 0 auto var(--space-8);
+  padding: 0 var(--space-4);
+}
+
+.heading {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 3.5rem);
+  line-height: 1.05;
+}
+
+.description {
+  margin: var(--space-4) 0 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+}
+
+.body {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}

@@ -162,14 +162,19 @@ export function useNavigation() {
     }
   }, [])
 
-  const items = useMemo<NavigationItem[]>(
-    () =>
-      treeItems.map((item) => ({
-        label: item.label,
-        to: item.to,
-      })),
-    [treeItems],
-  )
+  const items = useMemo<NavigationItem[]>(() => {
+    const baseItems = treeItems.map((item) => ({
+      label: item.label,
+      to: item.to,
+    }))
+
+    const testItem: NavigationItem = { label: 'Test Page', to: '/test' }
+    if (!baseItems.some((item) => item.to === testItem.to)) {
+      baseItems.push(testItem)
+    }
+
+    return baseItems
+  }, [treeItems])
 
   return { items, treeItems, loading }
 }

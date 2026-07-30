@@ -54,7 +54,7 @@ export default function LatestPosts() {
         {items.map((item) => {
           const imageUrl = resolveFeaturedImageUrl(item as never)
           return (
-            <li key={item.linkTo} className={styles['post-grid-item']}>
+            <li key={item.pageId ?? item.linkTo} className={styles['post-grid-item']}>
               <Link to={item.linkTo} className={styles['post-card']}>
                 {imageUrl ? <img src={imageUrl} alt={item.title} className={styles['post-card__image']} loading="lazy" /> : null}
                 <h3 className={styles['post-card__title']}>{item.title}</h3>

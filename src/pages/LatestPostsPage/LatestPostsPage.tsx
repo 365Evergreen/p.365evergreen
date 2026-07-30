@@ -9,6 +9,7 @@ import {
   loadLatestPosts,
 } from '../../services/content/contentClient'
 
+
 type ViewMode = 'grid' | 'list'
 const CONTENT_BASE_URL = (
   import.meta.env.VITE_CONTENT_BASE_URL || 'https://cdn.365evergreen.com/content'
@@ -42,6 +43,8 @@ function resolveFeaturedImageUrl(post: { id?: string; featuredImage?: { url: str
 
   return null
 }
+
+import GalleryLayout from '../../layouts/GalleryLayout'
 
 export default function LatestPostsPage() {
   const { category: categoryParam = '' } = useParams<{ category?: string }>()
@@ -137,17 +140,18 @@ export default function LatestPostsPage() {
   }
 
   return (
-    <section className="blog-list">
-      <SeoHead
-        title="Blog · 365 Evergreen"
-        description="Practical Microsoft 365 guidance on security, identity, and modern work from the 365 Evergreen team."
-      />
+    <GalleryLayout>
+      <section className="blog-list">
+        <SeoHead
+          title="Blog · 365 Evergreen"
+          description="Practical Microsoft 365 guidance on security, identity, and modern work from the 365 Evergreen team."
+        />
 
-      <header className="blog-list__header">
-        <h1>Latest updates</h1>
-      </header>
+        <header className="blog-list__header">
+          <h1>Latest updates</h1>
+        </header>
 
-      <div className={styles.layout}>
+        <div className={styles.layout}>
         <div className={styles.main}>
           <form
             className={`blog-filters ${styles.searchRow}`}
@@ -319,6 +323,7 @@ export default function LatestPostsPage() {
           ))}
         </aside>
       </div>
-    </section>
+      </section>
+    </GalleryLayout>
   )
 }

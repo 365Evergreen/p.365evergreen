@@ -2,7 +2,7 @@
   display: grid;
   gap: var(--space-5);
 
-  background: gray;
+  background: rgb(184, 98, 98);
   padding: var(--space-8) 0;
 }
 

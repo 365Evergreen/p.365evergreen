@@ -1,0 +1,12 @@
+.gallery {
+  width: 100%;
+  padding: var(--space-10) 0;
+  background-color: var(--color-surface-muted);
+}
+
+.inner {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}

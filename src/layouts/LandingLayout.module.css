@@ -1,0 +1,14 @@
+.landing {
+  width: 100%;
+  min-height: calc(100vh - var(--site-footer-height, 0px));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.inner {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 var(--space-4);
+}

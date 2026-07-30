@@ -135,8 +135,10 @@ export default function LatestPosts({
         </aside>
 
         <ul className={styles.grid}>
-          {searchablePosts.map((post) => (
-            <li key={`${post.linkTo}-${post.title}`}>
+          {searchablePosts.map((post, index) => {
+          const itemKey = post.pageId ?? `${post.linkTo}-${post.title}-${index}`
+          return (
+            <li key={itemKey}>
               <Link className={styles.cardLink} to={post.linkTo}>
                 <article className={styles.card}>
                   {post.meta ? <p className={styles.meta}>{post.meta}</p> : null}

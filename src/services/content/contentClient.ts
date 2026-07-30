@@ -279,6 +279,11 @@ function normalizePageContent(payload: unknown): PageContent {
   const path = typeof metadata.path === 'string' ? metadata.path : undefined
   const publishDate = typeof metadata.publishDate === 'string' ? metadata.publishDate : undefined
   const updatedDate = typeof metadata.updatedDate === 'string' ? metadata.updatedDate : undefined
+  const layout =
+    typeof metadata.layout === 'string' &&
+    ['landing', 'gallery', 'content'].includes(metadata.layout)
+      ? (metadata.layout as 'landing' | 'gallery' | 'content')
+      : undefined
   const keywords = Array.isArray(metadata.keywords)
     ? (metadata.keywords.filter((item): item is string => typeof item === 'string'))
     : undefined
@@ -303,6 +308,7 @@ function normalizePageContent(payload: unknown): PageContent {
     keywords,
     featuredImage,
     seo,
+    layout,
     blocks,
   }
 }
@@ -889,14 +895,20 @@ export async function loadPage(id: string): Promise<PageContent | undefined> {
 /** Published page content by slug (e.g. "what-we-do"), or undefined. */
 export async function loadPageBySlug(slug: string): Promise<PageContent | undefined> {
   const normalizedSlug = slug.replace(/^\/+|\/+$/g, '').trim().toLowerCase()
-  if (!normalizedSlug) {
-    return undefined
-  }
 
   const index = await loadPagesIndex()
   const entry = index.pages.find((page) => {
     if (page.status !== 'published') {
       return false
+    }
+
+    if (normalizedSlug === '') {
+      const pagePathSlug = normalizePathSlug(page.path)
+      if (pagePathSlug === '') {
+        return true
+      }
+      const pageSlug = inferPageSlug(page).toLowerCase()
+      return pageSlug === '' || pageSlug === 'home'
     }
 
     const pageSlug = inferPageSlug(page)

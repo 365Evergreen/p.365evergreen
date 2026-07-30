@@ -6,7 +6,8 @@
   background-color: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 1rem;
-  overflow: hidden; /* Ensures thumbnail corners match card radius */
+  overflow: hidden;
+  /* Ensures thumbnail corners match card radius */
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -60,7 +61,8 @@
 
 /* Text Content Area */
 .content {
-  padding: 2rem 1.5rem 1.5rem 1.5rem; /* Large top padding to clear floating icon */
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  /* Large top padding to clear floating icon */
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -84,7 +86,8 @@
   color: #4b5563;
   line-height: 1.6;
   font-size: 0.875rem;
-  flex-grow: 1; /* Pushes the CTA to the absolute bottom of the container */
+  flex-grow: 1;
+  /* Pushes the CTA to the absolute bottom of the container */
 }
 
 /* CTA Button Styling */
@@ -116,6 +119,7 @@
 .ctaButton:hover .ctaIcon {
   transform: translateX(3px);
 }
+
 .gridSection {
   padding: 4rem 1.5rem;
   background-color: #f9fafb;
@@ -129,21 +133,24 @@
 /* Grid Container Setup */
 .grid {
   display: grid;
-  grid-template-columns: 1fr; /* 1 column default (mobile) */
+  grid-template-columns: 1fr;
+  /* 1 column default (mobile) */
   gap: 2rem;
 }
 
 /* Tablet Screens (640px and up) */
 @media (min-width: 640px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns */
   }
 }
 
 /* Desktop Screens (1024px and up) */
 @media (min-width: 1024px) {
   .grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns strictly */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns strictly */
   }
 }
 

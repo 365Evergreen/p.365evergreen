@@ -73,6 +73,7 @@ const registry: Record<string, ComponentType<BlockComponentProps>> = {
   group: GroupBlock,
   buttons: ButtonsBlock,
   button: ButtonBlock,
+  grid: FeatureGridBlock,
   // P1
   table: TableBlock,
   accordion: AccordionBlock,

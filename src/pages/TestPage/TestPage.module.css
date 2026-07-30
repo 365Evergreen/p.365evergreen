@@ -1,0 +1,24 @@
+.status {
+  padding: var(--header-height) var(--space-4);
+  max-width: 740px;
+  margin: 0 auto;
+  color: var(--color-text-secondary);
+}
+
+.page {
+  padding-top: var(--space-10);
+}
+
+.header {
+  max-width: 940px;
+  margin-bottom: var(--space-8);
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header p {
+  margin: var(--space-4) 0 0;
+  color: var(--color-text-secondary);
+}

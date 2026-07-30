@@ -120,6 +120,7 @@ export interface PageContent {
   featuredImage?: ImageRef
   seo?: SeoMeta
   blocks: PageBlock[]
+  layout?: 'landing' | 'gallery' | 'content'
 }
 
 export interface PagesDoc {

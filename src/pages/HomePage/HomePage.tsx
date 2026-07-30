@@ -1,36 +1,25 @@
 import { useState } from 'react'
 import styles from './HomePage.module.css'
-//import contentClient from '../../services/content/contentClient'
-//import Contact from '../../components/Contact'
 import Drawer from '../../components/Drawer/Drawer'
-//import EvergreenMoment from '../../components/EvergreenMoment'
-//import Hero from '../../components/Hero/Hero'
 import { ServiceGrid } from '../../components/ServiceCard/ServiceGrid'
 import { HowWeDoIt } from '../../components/HowWeDoIt/HowWeDoIt'
 import LatestPosts from './LatestUpdates/LatestUpdates'
 import HomepageCta from '../../components/HomePageCta'
-//import HomepageCta from '../../components/HomepageCta'
-//import VideoPlayer from '../../components/VideoPlayer/VideoPlayer'
-//import LatestPosts from '../../components/LatestPosts'
-//import Outcome from '../../components/Outcome'
-//import GetInTouch from '../../components/GetInTouch/GetInTouch'
-//import { AdaptiveCardForm } from '../../components/GetInTouch/AdaptiveCardForm';
 import { GetInTouch } from '../../components/GetInTouch';
 import HeroSlideshow from '../../components/HeroSlideShow/HeroSlideShow';
 
+import LandingLayout from '../../layouts/LandingLayout'
 
 export default function HomePage() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
   const openDrawer = () => setIsDrawerOpen(true)
   const closeDrawer = () => setIsDrawerOpen(false)
 
-
-
   return (
-    <><div className={styles.heroSlideshowContainer}>
-
-      <HeroSlideshow />
-    </div>
+    <LandingLayout>
+      <div className={styles.heroSlideshowContainer}>
+        <HeroSlideshow />
+      </div>
       <div className="page-shell">
 
         <div className="homeMainContent">
@@ -83,7 +72,6 @@ export default function HomePage() {
         title="Start a conversation"
         description="Tell us a bit about your organisation so we can suggest the next best step."
       />
-    </>
-
+    </LandingLayout>
   )
 }

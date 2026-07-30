@@ -4,6 +4,7 @@ import { loadPageBySlug, loadResourcesIndex } from '../../services/content/conte
 import { BlockRenderer } from '../../components/Renderers/BlockRenderer'
 import ResourceCardGrid from '../../components/ResourceCardGrid'
 import SeoHead from '../../components/SeoHead'
+import GalleryLayout from '../../layouts/GalleryLayout'
 import styles from './ResourcesPage.module.css'
 
 const PAGE_SLUG = 'resources'
@@ -40,8 +41,9 @@ export default function ResourcesPage() {
   }
 
   return (
-    <section className={styles.page}>
-      <SeoHead
+    <GalleryLayout>
+      <section className={styles.page}>
+        <SeoHead
         title={page.seo?.metaTitle ?? page.title}
         description={page.seo?.metaDescription ?? page.description}
         canonicalUrl={page.seo?.canonicalUrl}
@@ -60,5 +62,6 @@ export default function ResourcesPage() {
         <ResourceCardGrid resources={resources ?? []} />
       </div>
     </section>
+    </GalleryLayout>
   )
 }

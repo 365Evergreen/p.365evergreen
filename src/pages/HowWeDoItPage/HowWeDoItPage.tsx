@@ -3,10 +3,11 @@ import { useAsyncData } from '../../lib/useAsyncData'
 import { loadPageBySlug } from '../../services/content/contentClient'
 import { BlockRenderer } from '../../components/Renderers/BlockRenderer'
 import SeoHead from '../../components/SeoHead'
+import ContentLayout from '../../layouts/ContentLayout'
 import styles from './HowWeDoItPage.module.css'
 import { Accordion } from './Accordion/Accordion'
 import Tabs from './Tabs/Tabs';
-import HeroSlideshow from '../../components/HeroSlideShow/HeroSlideShow'
+
 //import TabsList from '../../components/TabsList/TabsList'
 
 const PAGE_SLUG = 'how-we-do-it'
@@ -59,7 +60,7 @@ export default function WhatWeDoPage() {
   }
 
   return (
-    <section className={styles.page}>
+    <ContentLayout title={page.title} description={page.description} className={styles.page}>
       <SeoHead
         title={page.seo?.metaTitle ?? page.title}
         description={page.seo?.metaDescription ?? page.description}
@@ -69,14 +70,9 @@ export default function WhatWeDoPage() {
         noindex={page.seo?.noindex}
         ogType={page.seo?.openGraph?.type ?? 'website'}
       />
-     <HeroSlideshow />
-      <div className={styles.content}>
-        <div className={styles.header}>
-          <h1>{page.title}</h1>
-          <p>{page.description}</p>
-        </div>
-        <BlockRenderer blocks={page.blocks} />
-      </div>
+
+      <BlockRenderer blocks={page.blocks} />
+
       <div className={styles.accordion}>
         <Accordion
           items={items}
@@ -86,10 +82,8 @@ export default function WhatWeDoPage() {
         <div className={styles.tabs}>
            <Tabs />
         </div>
-   
       </div>
-
-    </section>
+    </ContentLayout>
   )
 }
 
