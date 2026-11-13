@@ -136,19 +136,20 @@ export default function LatestPosts({
 
         <ul className={styles.grid}>
           {searchablePosts.map((post, index) => {
-          const itemKey = post.pageId ?? `${post.linkTo}-${post.title}-${index}`
-          return (
-            <li key={itemKey}>
-              <Link className={styles.cardLink} to={post.linkTo}>
-                <article className={styles.card}>
-                  {post.meta ? <p className={styles.meta}>{post.meta}</p> : null}
-                  <h3 className={styles.cardTitle}>{post.title}</h3>
-                  {post.excerpt ? <p className={styles.excerpt}>{post.excerpt}</p> : null}
-                  {post.category ? <p className={styles.category}>{post.category}</p> : null}
-                </article>
-              </Link>
-            </li>
-          ))}
+            const itemKey = post.pageId ?? `${post.linkTo}-${post.title}-${index}`
+            return (
+              <li key={itemKey}>
+                <Link className={styles.cardLink} to={post.linkTo}>
+                  <article className={styles.card}>
+                    {post.meta ? <p className={styles.meta}>{post.meta}</p> : null}
+                    <h3 className={styles.cardTitle}>{post.title}</h3>
+                    {post.excerpt ? <p className={styles.excerpt}>{post.excerpt}</p> : null}
+                    {post.category ? <p className={styles.category}>{post.category}</p> : null}
+                  </article>
+                </Link>
+              </li>
+            )
+          })}
         </ul>
       </div>
     </section>
